@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/2cf0b843ae.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v6.0.0-beta2/css/all.css"
+      integrity="your-integrity-code"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <section class="start_page" id="section1">
+      <div class="main-container">
+        <div class="welcome-pageContainer">
+          <div class="center-content">
+            <h1 class="welcome_text">Let's Cook</h1>
+            <h4 class="invite">Find best recipes for cooking</h4>
+          </div>
+          <div class="welcome_button_container">
+            <button class="welc_btn" id="signin" onclick="show_section2()">
+              Find best recipes for Cooking <i class="fa fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="second_page" id="section2">
+      <div class="secpage_container">
+        <header>
+          <div class="title_container">
+            <h3 class="title_text">Find best recipes</h3>
+          </div>
+          <div id="search_container" class="search">
+            <form role="search">
+              <label class="search_label" for="search"></label>
+              <input id="inpt" type="search" placeholder="Search..." />
+              <button id="search_btn" class="search_btn" type="submit">
+                Go
+              </button>
+            </form>
+            <div id="result_Div" class="results_container">
+              <div id="hidden_div" class="hidden"></div>
+            </div>
+          </div>
+        </header>
+        <div class="trending">
+          <h2 class="trending_text">Trending Now 🔥</h2>
+          <div class="scroll_trands">
+            <div class="style_favs_container snaps_inline">
+              <div class="fav">
+                <div class="style_favs">
+                  <img
+                    id="sweet.potato"
+                    src="IMG_8520.jpg"
+                    alt="Oven baked sweet potato"
+                  />
+                  <label for="sweet.potato" class="label"
+                    >Oven baked sweet potato
+                    <span class="label_span">🍠 </span></label
+                  >
+                </div>
+              </div>
+              <div class="fav">
+                <div class="style_favs">
+                  <img
+                    id="bolognese.img"
+                    src="IMG_8521.jpg"
+                    alt="bolognese pasta "
+                  />
+                  <label for="bolognese.img" id="bolognese" class="label"
+                    >bolognese pasta baked<span class="label_span"
+                      >🍝</span
+                    ></label
+                  >
+                </div>
+              </div>
+              <div class="fav">
+                <div class="style_favs">
+                  <img id="Buddha.Bowl" src="IMG_8522.jpg" alt="Buddha Bowl " />
+                  <label for="Buddha.Bowl" class="label"
+                    >Buddha Bowl <span class="label_span">🥗</span>
+                  </label>
+                </div>
+              </div>
+              <div class="fav">
+                <div class="style_favs">
+                  <img
+                    id="soup"
+                    src="IMG_8524.jpg"
+                    alt="Soup with Zucchini Noodles"
+                  />
+                  <label for="soup" class="label"
+                    >Soup with Zucchini Noodles
+                    <span class="label_span">🍜 </span>
+                  </label>
+                </div>
+              </div>
+              <div class="fav">
+                <div class="style_favs">
+                  <img
+                    id="chickpeas"
+                    src="Screenshot 2024-02-02 at 1.15.14 AM.png"
+                    alt="chickpeas and kale"
+                  />
+                  <label for="chickpeas" class="label"
+                    >chickpeas and kale <span class="label_span">🌱 </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popular_category">
+            <div class="category_title">
+              <h3>Popular category</h3>
+            </div>
+
+            <div class="navbar_container">
+              <ul class="navbar_ul">
+                <li><a onclick="display_salad(event)" href="#">Salad</a></li>
+                <li><a onclick="display_breakfast(event)" href="#">Breakfast</a></li>
+               
+                <li><a onclick="display_pasta(event)" href="#">Pasta</a></li>
+                <li><a onclick="display_lunch(event)" href="#">Lunch</a></li>
+              </ul>
+            </div>
+        </section>
+            <div class="categories_container">
+                <div id="categories_items" class="categories_items">
+
+                    <section id="salad_ID">
+                        <!-- <i class="fa-solid fa-arrow-left"></i> -->
+                <div class="salad_container">
+                    <div class="salad_items snaps_inline">
+
+                    </div>
+                </div>
+            </section>
+
+            <section id="breakfast_ID">
+                <!-- <i class="fa-solid fa-arrow-left"></i> -->
+                <div class="breakfast_container">
+                    <div class="breakfast_items snaps_inline">
+
+                    </div>
+                </div>
+            </section>
+               
+               <section id="pasta_ID">
+                <!-- <i class="fa-solid fa-arrow-left"></i> -->
+                <div class="pasta_container">
+                    <div class="pasta_items snaps_inline">
+
+                    </div>
+                </div>
+            </section>
+            <section id="lunch_ID">
+                <!-- <i class="fa-solid fa-arrow-left"></i> -->
+
+                <div class="lunch_container">
+                    <div class="lunch_items snaps_inline">
+
+                    </div>
+                </div>
+            </section>
+            </div>
+
+
+
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    
+  </body>
+</html>
