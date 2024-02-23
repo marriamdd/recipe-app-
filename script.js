@@ -12,7 +12,7 @@ function food(name, src, ingredients, preparation) {
   (this.name = name), (this.src = src), (this.ingredients = ingredients);
   this.preparation = preparation;
 }
-
+ 
 let total_recipes = [];
 
 food.prototype.salads = function () {

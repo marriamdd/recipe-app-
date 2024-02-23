@@ -9,7 +9,7 @@
 html {
   font-size: 62.5%;
 }
-
+ 
 body {
   background: radial-gradient(
     666px at 0.4% 48%,
@@ -116,9 +116,7 @@ body {
 .trendy_recipes .label_span {
   font-size: 2rem;
 }
-/* #search_container {
-  display: inline-block;
-} */
+
 .second_page_search_bar {
   display: flex;
   flex-direction: column;
@@ -236,7 +234,6 @@ input:not(:placeholder-shown) {
   display: none;
 }
 .hidden {
-  /* display: none; */
   grid-auto-flow: row;
 
   gap: 1rem;
