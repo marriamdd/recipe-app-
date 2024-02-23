@@ -12,7 +12,7 @@ function food(name, src, ingredients, preparation) {
   (this.name = name), (this.src = src), (this.ingredients = ingredients);
   this.preparation = preparation;
 }
- 
+
 let total_recipes = [];
 
 food.prototype.salads = function () {
@@ -171,28 +171,32 @@ salad5.salads();
 const pasta3 = new food(
   " bolognese pasta 🍝 ",
   "images/pasta.img/IMG_8521.jpg",
-  "Spicy Cashew Dressing 🔥1 tbsp cashew butter1 tbsp apple cider vinegar1/2 tbsp water"
+  "Spicy Cashew Dressing 🔥1 tbsp cashew butter1 tbsp apple cider vinegar1/2 tbsp water",
+  "Thread a cherry tomato, a mozzarella ball, and a basil leaf onto small skewers or toothpicks.Arrange the skewers on a serving platter. Drizzle balsamic glaze over the skewers.  Serve as a refreshing and colorful appetizer."
 );
 pasta3.pasta();
 
 const salad6 = new food(
   " Buddha.Bowl 🥗",
   "images/salads.img/IMG_8522.jpg",
-  "Spicy Cashew Dressing 🥗 1 tbsp cashew butter1 tbsp apple cider vinegar1/2 tbsp water"
+  "Spicy Cashew Dressing 🥗 1 tbsp cashew butter1 tbsp apple cider vinegar1/2 tbsp water",
+  "Thread a cherry tomato, a mozzarella ball, and a basil leaf onto small skewers or toothpicks.Arrange the skewers on a serving platter.Drizzle balsamic glaze over the skewers.Serve as a refreshing and colorful appetizer."
 );
 salad6.salads();
 
 const lunch1 = new food(
   " Soup with Zucchini Noodles 🍜",
   "images/lunch.img/IMG_8524.jpg",
-  "Spicy Cashew Dressing 🔥1 tbsp cashew butter1 tbsp apple cider vinegar1/2 tbsp water"
+  "Spicy Cashew Dressing 🔥1 tbsp cashew butter1 tbsp apple cider vinegar1/2 tbsp water",
+  "Thread a cherry tomato, a mozzarella ball, and a basil leaf onto small skewers or toothpicks.Arrange the skewers on a serving platter.Drizzle balsamic glaze over the skewers.Serve as a refreshing and colorful appetizer."
 );
 lunch1.lunch();
 
 const breakfast3 = new food(
   "Chickpeas and kale 🥑 ",
   "images/breakfast.img/Screenshot 2024-02-02 at 1.15.14 AM.png",
-  "Spicy Cashew Dressing 🔥1 tbsp cashew butter1 tbsp apple cider vinegar1/2 tbsp water"
+  "Spicy Cashew Dressing 🔥1 tbsp cashew butter1 tbsp apple cider vinegar1/2 tbsp water",
+  "Thread a cherry tomato, a mozzarella ball, and a basil leaf onto small skewers or toothpicks.Arrange the skewers on a serving platter.Drizzle balsamic glaze over the skewers.Serve as a refreshing and colorful appetizer."
 );
 breakfast3.breakfast();
 
