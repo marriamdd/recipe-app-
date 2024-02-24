@@ -287,15 +287,23 @@ document.addEventListener("mousedown", (event) => {
 });
 
 let random_favs_conatiner = document.querySelector(".random_trendy_container");
+let selectedIndices = [];
 
 function random_trending_items() {
-  for (let i = 0; i <= 6; i++) {
-    let random_meal =
-      total_recipes[Math.floor(Math.random() * total_recipes.length)];
-    // create a clone of the random meal so that recipe still be part of them categories
+  for (let i = 0; i < 6; i++) {
+    let randomIndex;
+
+    do {
+      randomIndex = Math.floor(Math.random() * total_recipes.length);
+    } while (selectedIndices.includes(randomIndex));
+
+    selectedIndices.push(randomIndex);
+
+    let random_meal = total_recipes[randomIndex];
     let cloned_meal = random_meal.cloneNode(true);
     cloned_meal.className = "trendy_recipes";
     random_favs_conatiner.append(cloned_meal);
   }
 }
+
 random_trending_items();
