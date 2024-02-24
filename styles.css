@@ -20,7 +20,7 @@ body {
 }
 
 .main-container {
-  background-image: url(images/additional_pic/IMG_8519.jpg);
+  background-image: url(imagess/additional_pic/IMG_8519.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -120,7 +120,7 @@ body {
 .second_page_search_bar {
   display: flex;
   flex-direction: column;
-
+ align-items: center;
   margin-top: 2rem;
   min-height: 60px;
 }
@@ -173,7 +173,7 @@ input:not(:placeholder-shown) {
   overflow: hidden;
 }
 .title_container {
-  background: url(images/additional_pic/1.jpg) center/cover no-repeat;
+  background: url(imagess/additional_pic/1.jpg) center/cover no-repeat;
   height: 25vh;
   width: 100%;
   display: flex;
