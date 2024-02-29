@@ -65,7 +65,7 @@ body {
   line-height: 0.9rem;
   padding: 16px 35px;
   text-align: center;
-  align-self: self-end;
+
   margin-bottom: 4rem;
 }
 
@@ -78,6 +78,7 @@ body {
   background-color: #1a1a1a;
   box-shadow: rgba(246, 239, 239, 0.25) 0 8px 15px;
   transform: translateY(-2px);
+  cursor: pointer;
 }
 
 .welc_btn:active {
@@ -210,7 +211,7 @@ input:not(:placeholder-shown) {
   text-align: center;
   margin-top: 1rem;
 }
-.navbar_ul {
+.category_ul {
   display: flex;
   justify-content: space-evenly;
 }
@@ -229,6 +230,7 @@ input:not(:placeholder-shown) {
   background-color: #a3c995;
   border-radius: 10px;
   color: #181717;
+  cursor: pointer;
 }
 
 .results_container {
@@ -305,7 +307,7 @@ input {
   flex-direction: column;
   align-items: center;
   padding-top: 1.1rem;
-  margin-left: 0.5rem;
+  margin-left: 1.2rem;
   text-align: center;
   border-radius: 0.8rem;
   background: linear-gradient(to top, #dfe9f3 0%, white 100%);
@@ -350,18 +352,21 @@ input {
   display: flex;
   position: absolute;
   font-size: 1.1em;
-  width: 140px;
-  height: 115px;
+  inline-size: 100%;
+  height: auto;
   border-radius: 20px;
   border: 2px solid #3498db;
   background-color: rgba(213, 197, 197, 0.5);
   backdrop-filter: blur(1px);
-  padding: min(max(9px, 5%), 20px);
+  /* padding: 1rem; */
 
   justify-content: center;
 }
 .once_clicked_graph li {
-  width: 140px;
+}
+
+.recipe_title_div {
+  padding: 1rem;
 }
 .once_clicked_graph p {
   width: fit-content;
@@ -376,9 +381,10 @@ input {
 
 .ingredients_list {
   font-weight: bold;
-  max-width: 140px;
-  height: 100px;
-  text-align: start;
+
+  inline-size: auto;
+
+  aspect-ratio: 16/13;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -407,6 +413,7 @@ input {
   width: 340px;
   height: 330px;
   border-radius: 7px;
+  box-shadow: 0px 12px 34px 11px rgba(134, 143, 222, 0.2);
 }
 
 .full_recipe_img_div {
@@ -417,7 +424,7 @@ input {
 }
 .prep_info_div {
   font-size: 2rem;
-  color: rgb(177, 5, 5);
+  color: #be1f03;
   font-family: "Lora", serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -503,9 +510,67 @@ input {
 .ingredients_list_clone li:hover {
   background-color: #c2e0f5;
   color: rgb(235, 101, 101);
+  cursor: pointer;
 }
 .ingredients_title,
 .prep_title_div {
   font-size: 2.2rem;
   padding: 1rem;
+}
+.fullrecipe_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+}
+.nav_bar {
+  display: none;
+}
+
+.back_click {
+  border: none;
+}
+.menu_style {
+  display: flex;
+
+  flex-direction: column;
+  align-items: end;
+}
+.nav_bar_items {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  border: 1px inset rgba(49, 187, 236, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-right: 1.6rem;
+  background: rgba(219, 22, 5, 0.2);
+  color: rgba(74, 144, 226, 0.2);
+  line-height: 1.4em;
+}
+
+.nav_bar_items a {
+  display: block;
+  text-decoration: none;
+  color: rgba(72, 18, 2, 0.8);
+  text-align: start;
+  flex: 1;
+}
+
+.nav_bar_items a:hover {
+  cursor: pointer;
+  color: #57b5f8;
+}
+.menu_bar:hover {
+  cursor: pointer;
+}
+.back_click:hover {
+  cursor: pointer;
+}
+.common_class_forAll_recipe:hover {
+  cursor: pointer;
+}
+.category_ul:hover {
+  cursor: pointer;
 }
