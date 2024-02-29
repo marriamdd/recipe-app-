@@ -37,6 +37,9 @@
     <section class="second_page" id="section2">
       <div class="secpage_container">
         <header class="second_page_header">
+          <div class="second_pg_menu">
+           
+          </div>
           <div class="title_container">
             <h3 class="title_text">Find best recipes</h3>
           </div>
@@ -56,7 +59,7 @@
               <div id="hidden_div" class="hidden">
                 <div class="noResults_found">
                   <img
-                    src="images/additional_pic/no-product-images.png"
+                    src="imagess/additional_pic/no-product-images.png"
                     alt="no-product-images"
                   />
                 </div>
@@ -75,14 +78,14 @@
             </div>
 
             <div class="navbar_container">
-              <ul class="navbar_ul">
-                <li><a onclick="display_salad(event)" href="#">Salad</a></li>
+              <ul class="category_ul">
+                <li><a onclick="display_salad()" href="#">Salad</a></li>
                 <li>
-                  <a onclick="display_breakfast(event)" href="#">Breakfast</a>
+                  <a onclick="display_breakfast()" href="#">Breakfast</a>
                 </li>
 
-                <li><a onclick="display_pasta(event)" href="#">Pasta</a></li>
-                <li><a onclick="display_lunch(event)" href="#">Lunch</a></li>
+                <li><a onclick="display_pasta()" href="#">Pasta</a></li>
+                <li><a onclick="display_lunch()" href="#">Lunch</a></li>
               </ul>
             </div>
           </div>
@@ -115,6 +118,53 @@
           </div>
         </div>
       </div>
+    </section>
+    <section id="full_recipe_info_section">
+      <header class="fullrecipe_header">
+        <button id="home_button" class="back_click" onclick="backtohome()">
+          <i class="fa-duotone fa-arrow-left back_click"></i>
+        </button>
+        <i class="fa-regular fa-bars menu_bar"></i>
+      </header>
+      <div class="nav_bar nav_bar_2">
+        <ul class="nav_bar_items">
+          <li onclick="salads_page()"><a href="#salads_page_id">Salads</a></li>
+          <li><a onclick="breakfast_page()" href="#breakfast_page_id">breakfast</a></li>
+          <li><a  onclick="lunch_page()" href="#lunch_page_id">lunch</a></li>
+          <li><a onclick="pasta_page()" href="#pasta_page_id">pasta</a></li>
+        </ul>
+      </div>
+
+      <div class="full_recipe_info">
+        <div class="prep_inf_container">
+          <span>Prep Time</span>
+          <span> Cook Time</span>
+          <span>Servings</span>
+        </div>
+      </div>
+    </section>
+    <section id="salads_page_id" class="salads_page">
+      <button id="home_button" class="back_click" onclick="backtohome()">
+        <i class="fa-duotone fa-arrow-left back_click"></i>
+      </button>
+    </section>
+
+    <section id="breakfast_page_id" class="breakfast_page">
+      <button id="home_button" class="back_click" onclick="backtohome()">
+        <i class="fa-duotone fa-arrow-left back_click"></i>
+      </button>
+    </section>
+
+    <section id="lunch_page_id" class="lunch_page">
+      <button id="home_button" class="back_click" onclick="backtohome()">
+        <i class="fa-duotone fa-arrow-left back_click"></i>
+      </button>
+    </section>
+
+    <section id="pasta_page_id" class="pasta_page">
+      <button id="home_button" class="back_click" onclick="backtohome()">
+        <i class="fa-duotone fa-arrow-left back_click"></i>
+      </button>
     </section>
   </body>
 </html>
