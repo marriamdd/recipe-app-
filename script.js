@@ -190,120 +190,146 @@ food.prototype.lunch = function () {
 const salad1 = new food(
   "Gnocchi with avocado sauce 🥑 ",
   "imagess/salads.img/Screenshot 2024-02-04 at 8.52.13 PM.png",
+
   "avocados - 2 ripe  ,olive oil - 1 tbsp ,water - 2 tbsp ,fresh garlic - 1 clove ,lemon Juice - 1/2  ,Salt and pepper ",
   "Preparation : So easy! 😁. Peel the avocados and the garlic, put them together with all the other ingredients in a blender and blend until smooth and creamy.Ingredients for the sauce:.2 ripe avocados.1 tbsp olive oil.2 tbsp water.1 clove fresh garlic or 1 tsp garlic powder.Juice of 1/2 lemon (optional)Salt and pepper to taste .",
   " 0 hrs , 30 min , 2 - 3 "
+
 );
 salad1.salads();
 
 const salad2 = new food(
   "coconut rice pudding 🍚 🍓 🫐 ",
   "imagess/salads.img/Screenshot 2024-02-04 at 9.06.31 PM.png",
+
   "jasmin rice - 2/3 cup , plant based milk - 180 ml , coconut milk -2/3 , coconut sugar- 1-2 tsp , coconut butter- 1 tsp  .",
   "Preparation : Put all the ingredients except the coconut butter in a pot and bring to a boil. Reduce to a low heat, cover and let it simmer for roughly 15 minutes (it takes longer if you use “Milchreis”). Do not stir too often and keep the lid closed.Remove from heat, add the coconut butter and maybe some more coconut milk if desired. Have a wonderful evening",
   " 40 hrs , 0 min ,2 - 3 "
+
 );
 salad2.salads();
 
 const pasta1 = new food(
   "Creamy tahini-garlic pasta 🍝",
   "imagess/pasta.img/Screenshot 2024-02-05 at 1.53.50 AM.png",
+
   "tahini - 1/2 cup,water - 180 ml , garlic powder - 1 tsp  ,onion powder - 1 tsp , pepper-1 tsp , salt - 1 tsp .",
   "Preparation :So so easy . Put everything together in a small blender or food processor and blend until everything is combined.Mix with your favorite pasta 🍝.",
   " 1 hrs , 10 min , 2 - 3 "
+
 );
 pasta1.pasta();
 
 const pasta2 = new food(
   "Creamy spinach pasta 🍝",
   "imagess/pasta.img/Screenshot 2024-02-04 at 11.18.48 PM.png",
+
   " pasta - 1 box ,white besns - 1/2 Can,cashew mil k- 1 cup ,nutritional yeast -2 tbsp ,spinach - 2 cups,raw cashews  - 1/4 cup, garlic powder - 1 tsp , salt- 1/2 tsp, pepper - 1/4 tsp",
   "Preparation: Cook pasta according to directions on package. Combine the remainder ingredients (except spinach) in a blender and blend until smooth. Add more cashew milk if needed.In a pan heat 1 tsp avocado oil and add chopped spinach, season with salt and pepper. This should wilt down in only 30 seconds! Once pasta is cooked drain add to cooked spinach and add in the sauce. ",
   " 1 hrs , 15 min ,  2 - 3 "
+
 );
 pasta2.pasta();
 
 const breakfast1 = new food(
   "🌿 Simple Basil Pesto Recipe 🌿",
   "imagess/breakfast.img/Screenshot 2024-02-04 at 11.29.49 PM.png",
+
   "lemon juice - 3 cups , olive oil-1/4 cup ,pine nuts -  1/3 cup , garlic cloves - 2 , himalayan sea salt",
   "Preparation : Add all ingredients except olive oil to a food processor. Pulse until evenly chopped. Slowly add olive oil through the top of the processor and pulse until combined.",
   " 30 min ,  0 min , 1 - 2 "
+
 );
 breakfast1.breakfast();
 
 const breakfast2 = new food(
   "Crispy Oven Baked Potato 🍠",
   "imagess/breakfast.img/Screenshot 2024-02-04 at 11.34.43 PM.png",
+
   "chickpea flour - 1 cup ,  bean flour - 120 g ,tapioca - 1/2 cup  , flour/starch - 60g , spinach leaves - 60 g , water - 1/8 cup ,salt -  1/3 tsp ",
   "Preparation : Process all ingredients in your food processor or blender until the batter is smooth. Use 1 cup of water if you plan to make thicker/smaller tortillas for tacos. Add about 1 1/8 cup of water if you want to make thinner/bigger tortillas for e.g. burritos",
   " 30 min  ,  0 min  ,  2 - 3 "
+
 );
 breakfast2.breakfast();
 
 const salad3 = new food(
   "🍄 Grilled mushrooms 🍄 ",
   "imagess/salads.img/Screenshot 2024-02-04 at 11.48.45 PM.png",
+
   "mushroom fiats - 8 medium , olive cloves - 60mls , continental parsley - 1/4 chopped ",
   "Preparation :Step 1Preheat grill on medium-high. Line a grill tray or baking tray with foil. Place the mushrooms on the lined tray.Step 2Combine the olive oil, garlic and 2 tablespoons of the parsley in a bowl. Drizzle the mushrooms with the garlic oil.",
   " 1 hrs , 0 min , 2 - 3 "
+
 );
 salad3.salads();
 
 const salad4 = new food(
   " Spinach salad 🍓🥑 ",
   "imagess/salads.img/Screenshot 2024-02-04 at 11.45.53 PM.png",
+
   "cashew butter -  1 tbsp , apple cider - 1 tbsp , vinegar  - 1/2 tbsp  , water - 60mls",
   "Preparation :Step 1Preheat grill on medium-high. Line a grill tray or baking tray with foil. Place the mushrooms on the lined tray.Step 2Combine the olive oil, garlic and 2 tablespoons of the parsley in a bowl. Drizzle the mushrooms with the garlic oil.",
 
   " 1 hrs  ,10 min , 2 - 3 "
+
 );
 salad4.salads();
 
 const salad5 = new food(
   " Oven baked sweet potato 🍠",
   "imagess/salads.img/IMG_8520.jpg ",
+
   "sweet potatoes - 4 ,  optional - 4 tbsp, black pepper",
   "Preparation :Step 1 Preheat oven to 425º. On a baking sheet lined with aluminum foil, prick sweet potatoes all over with a fork. Rub the outsides with a small amount of olive oil if you intend to eat the skins. Step 2 Bake until tender, 45 to 50 minutes. Step 3 Let cool, then split the tops open with a knife and top with a pat of butter. Step 4 Season with salt and pepper before serving.",
   " 1 hrs , 0 min , 2 - 3 "
+
 );
 salad5.salads();
 
 const pasta3 = new food(
   " bolognese pasta 🍝 ",
   "imagess/pasta.img/IMG_8521.jpg",
+
   "cashew butter - 1 tbsp , apple cider vinegar - 1 tbsp ,water- 1/2 tbsp ",
   "Preparation :Thread a cherry tomato, a mozzarella ball, and a basil leaf onto small skewers or toothpicks.Arrange the skewers on a serving platter. Drizzle balsamic glaze over the skewers.  Serve as a refreshing and colorful appetizer.",
   " 1 hrs , 20 min , 2 - 3 "
+
 );
 pasta3.pasta();
 
 const salad6 = new food(
   " Buddha.Bowl 🥗",
   "imagess/salads.img/IMG_8522.jpg",
+
   "cashew butter- 1 tbsp,apple cider - 1 tbsp , vinegar -1/2 tbsp , water - 1/2 tbsp",
   "Preparation :Thread a cherry tomato, a mozzarella ball, and a basil leaf onto small skewers or toothpicks.Arrange the skewers on a serving platter.Drizzle balsamic glaze over the skewers.Serve as a refreshing and colorful appetizer.",
   " 1 hrs  ,10 min , 2 - 3 "
+
 );
 salad6.salads();
 
 const lunch1 = new food(
   " Soup with Zucchini Noodles 🍜",
   "imagess/lunch.img/IMG_8524.jpg",
+
   "cashew butter- 1 tbsp,apple cider - 1 tbsp , vinegar -1/2 tbsp , water - 1/2 tbsp",
 
   "Preparation :  Thread a cherry tomato, a mozzarella ball, and a basil leaf onto small skewers or toothpicks.Arrange the skewers on a serving platter.Drizzle balsamic glaze over the skewers.Serve as a refreshing and colorful appetizer.",
   " 1 hrs , 10 min , 2 - 3 "
+
 );
 lunch1.lunch();
 
 const breakfast3 = new food(
   "Chickpeas and kale 🥑 ",
   "imagess/breakfast.img/Screenshot 2024-02-02 at 1.15.14 AM.png",
+
   "cashew butter- 1 tbsp,apple cider - 1 tbsp , vinegar -1/2 tbsp , water - 1/2 tbsp",
 
   "Preparation ,Thread a cherry tomato, a mozzarella ball, and a basil leaf onto small skewers or toothpicks.Arrange the skewers on a serving platter.Drizzle balsamic glaze over the skewers.Serve as a refreshing and colorful appetizer.",
   " 1 hrs   , 10 min , 2 - 3 "
+
 );
 breakfast3.breakfast();
 
@@ -415,11 +441,14 @@ function random_trending_items() {
 
     let random_meal = total_recipes[randomIndex];
     let cloned_meal = random_meal.cloneNode(true);
+
     cloned_meal.className =
       "common_class_forAll_recipe" + " " + "trendy_recipes";
+
     random_favs_conatiner.append(cloned_meal);
   }
 }
+
 random_trending_items();
 
 function create_ingredients_list(ingredients_text) {
