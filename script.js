@@ -1,6 +1,7 @@
 function show_section2() {
   document.getElementById("section1").style.display = "none";
   document.getElementById("section2").style.display = "block";
+  document.querySelector("footer").style.display = "flex";
 }
 
 const categories_items = document.getElementById("categories_items");
@@ -18,11 +19,15 @@ function food(name, src, ingredients, preparation, prep_info) {
 
 let total_recipes = [];
 let ing = [];
-
+const heartButtonTemplate = document.querySelector(".heart_btn");
+let uniqueIdCounter = 0;
 food.prototype.salads = function () {
   const newDiv = document.createElement("div");
   newDiv.className = this.additionalClassName + " " + "salad";
+  uniqueIdCounter++;
 
+  const uniqueId = `salad_${uniqueIdCounter}`;
+  newDiv.dataset.recipeId = uniqueId;
   const newimg = document.createElement("img");
   const title = document.createElement("label");
   title.className = "recipes_title";
@@ -41,7 +46,17 @@ food.prototype.salads = function () {
   prep_info.className = "prep_info";
   prep_info.append(this.prep_info_value);
 
-  newDiv.append(newimg, recipe_title_div, ingredients, preparation, prep_info);
+  const heart_btn = heartButtonTemplate.cloneNode(true);
+  heart_btn.style.display = "block";
+
+  newDiv.append(
+    newimg,
+    recipe_title_div,
+    ingredients,
+    preparation,
+    prep_info,
+    heart_btn
+  );
 
   title.append(this.name);
   newimg.src = this.src;
@@ -56,7 +71,10 @@ food.prototype.salads = function () {
 food.prototype.pasta = function () {
   const newDiv = document.createElement("div");
   newDiv.className = this.additionalClassName + " " + "pasta";
+  uniqueIdCounter++;
 
+  const uniqueId = `pasta_${uniqueIdCounter}`;
+  newDiv.setAttribute("data-recipe-id", uniqueId);
   const newimg = document.createElement("img");
   const title = document.createElement("label");
   title.className = "recipes_title";
@@ -72,8 +90,17 @@ food.prototype.pasta = function () {
   const prep_info = document.createElement("span");
   prep_info.className = "prep_info";
   prep_info.append(this.prep_info_value);
+  const heart_btn = heartButtonTemplate.cloneNode(true);
+  heart_btn.style.display = "block";
 
-  newDiv.append(newimg, recipe_title_div, ingredients, preparation, prep_info);
+  newDiv.append(
+    newimg,
+    recipe_title_div,
+    ingredients,
+    preparation,
+    prep_info,
+    heart_btn
+  );
   title.append(this.name);
 
   newimg.src = this.src;
@@ -85,7 +112,10 @@ food.prototype.pasta = function () {
 food.prototype.breakfast = function () {
   const newDiv = document.createElement("div");
   newDiv.className = this.additionalClassName + " " + "breakfast";
+  uniqueIdCounter++;
 
+  const uniqueId = `breakfast_${uniqueIdCounter}`;
+  newDiv.setAttribute("data-recipe-id", uniqueId);
   const newimg = document.createElement("img");
   const title = document.createElement("label");
   title.className = "recipes_title";
@@ -100,8 +130,17 @@ food.prototype.breakfast = function () {
   const prep_info = document.createElement("span");
   prep_info.className = "prep_info";
   prep_info.append(this.prep_info_value);
+  const heart_btn = heartButtonTemplate.cloneNode(true);
+  heart_btn.style.display = "block";
 
-  newDiv.append(newimg, recipe_title_div, ingredients, preparation, prep_info);
+  newDiv.append(
+    newimg,
+    recipe_title_div,
+    ingredients,
+    preparation,
+    prep_info,
+    heart_btn
+  );
   title.append(this.name);
   newimg.src = this.src;
   ingredients.append(this.ingredients);
@@ -112,7 +151,10 @@ food.prototype.breakfast = function () {
 food.prototype.lunch = function () {
   const newDiv = document.createElement("div");
   newDiv.className = this.additionalClassName + " " + "lunch";
+  uniqueIdCounter++;
 
+  const uniqueId = `lunch_${uniqueIdCounter}`;
+  newDiv.setAttribute("data-recipe-id", uniqueId);
   const newimg = document.createElement("img");
   const title = document.createElement("label");
   title.className = "recipes_title";
@@ -127,8 +169,17 @@ food.prototype.lunch = function () {
   const prep_info = document.createElement("span");
   prep_info.className = "prep_info";
   prep_info.append(this.prep_info_value);
+  const heart_btn = heartButtonTemplate.cloneNode(true);
+  heart_btn.style.display = "block";
 
-  newDiv.append(newimg, recipe_title_div, ingredients, preparation, prep_info);
+  newDiv.append(
+    newimg,
+    recipe_title_div,
+    ingredients,
+    preparation,
+    prep_info,
+    heart_btn
+  );
   title.append(this.name);
   newimg.src = this.src;
   ingredients.append(this.ingredients);
@@ -139,17 +190,16 @@ food.prototype.lunch = function () {
 const salad1 = new food(
   "Gnocchi with avocado sauce 🥑 ",
   "imagess/salads.img/Screenshot 2024-02-04 at 8.52.13 PM.png",
-  "Ingredients ,avocados - 2 ripe  ,olive oil - 1 tbsp ,water - 2 tbsp ,fresh garlic - 1 clove ,lemon Juice - 1/2  ,Salt and pepper ",
+  "avocados - 2 ripe  ,olive oil - 1 tbsp ,water - 2 tbsp ,fresh garlic - 1 clove ,lemon Juice - 1/2  ,Salt and pepper ",
   "Preparation : So easy! 😁. Peel the avocados and the garlic, put them together with all the other ingredients in a blender and blend until smooth and creamy.Ingredients for the sauce:.2 ripe avocados.1 tbsp olive oil.2 tbsp water.1 clove fresh garlic or 1 tsp garlic powder.Juice of 1/2 lemon (optional)Salt and pepper to taste .",
   " 0 hrs , 30 min , 2 - 3 "
 );
 salad1.salads();
 
-
 const salad2 = new food(
   "coconut rice pudding 🍚 🍓 🫐 ",
   "imagess/salads.img/Screenshot 2024-02-04 at 9.06.31 PM.png",
-  "Ingredients , jasmin rice - 2/3 cup , plant based milk - 180 ml , coconut milk -2/3 , coconut sugar- 1-2 tsp , coconut butter- 1 tsp  .",
+  "jasmin rice - 2/3 cup , plant based milk - 180 ml , coconut milk -2/3 , coconut sugar- 1-2 tsp , coconut butter- 1 tsp  .",
   "Preparation : Put all the ingredients except the coconut butter in a pot and bring to a boil. Reduce to a low heat, cover and let it simmer for roughly 15 minutes (it takes longer if you use “Milchreis”). Do not stir too often and keep the lid closed.Remove from heat, add the coconut butter and maybe some more coconut milk if desired. Have a wonderful evening",
   " 40 hrs , 0 min ,2 - 3 "
 );
@@ -158,7 +208,7 @@ salad2.salads();
 const pasta1 = new food(
   "Creamy tahini-garlic pasta 🍝",
   "imagess/pasta.img/Screenshot 2024-02-05 at 1.53.50 AM.png",
-  "Ingredients ,tahini - 1/2 cup,water - 180 ml , garlic powder - 1 tsp  ,onion powder - 1 tsp , pepper-1 tsp , salt - 1 tsp .",
+  "tahini - 1/2 cup,water - 180 ml , garlic powder - 1 tsp  ,onion powder - 1 tsp , pepper-1 tsp , salt - 1 tsp .",
   "Preparation :So so easy . Put everything together in a small blender or food processor and blend until everything is combined.Mix with your favorite pasta 🍝.",
   " 1 hrs , 10 min , 2 - 3 "
 );
@@ -167,7 +217,7 @@ pasta1.pasta();
 const pasta2 = new food(
   "Creamy spinach pasta 🍝",
   "imagess/pasta.img/Screenshot 2024-02-04 at 11.18.48 PM.png",
-  "Ingredients  , pasta - 1 box ,white besns - 1/2 Can,cashew mil k- 1 cup ,nutritional yeast -2 tbsp ,spinach - 2 cups,raw cashews  - 1/4 cup, garlic powder - 1 tsp , salt- 1/2 tsp, pepper - 1/4 tsp",
+  " pasta - 1 box ,white besns - 1/2 Can,cashew mil k- 1 cup ,nutritional yeast -2 tbsp ,spinach - 2 cups,raw cashews  - 1/4 cup, garlic powder - 1 tsp , salt- 1/2 tsp, pepper - 1/4 tsp",
   "Preparation: Cook pasta according to directions on package. Combine the remainder ingredients (except spinach) in a blender and blend until smooth. Add more cashew milk if needed.In a pan heat 1 tsp avocado oil and add chopped spinach, season with salt and pepper. This should wilt down in only 30 seconds! Once pasta is cooked drain add to cooked spinach and add in the sauce. ",
   " 1 hrs , 15 min ,  2 - 3 "
 );
@@ -176,7 +226,7 @@ pasta2.pasta();
 const breakfast1 = new food(
   "🌿 Simple Basil Pesto Recipe 🌿",
   "imagess/breakfast.img/Screenshot 2024-02-04 at 11.29.49 PM.png",
-  "Ingredients  ,lemon juice - 3 cups , olive oil-1/4 cup ,pine nuts -  1/3 cup , garlic cloves - 2 , himalayan sea salt",
+  "lemon juice - 3 cups , olive oil-1/4 cup ,pine nuts -  1/3 cup , garlic cloves - 2 , himalayan sea salt",
   "Preparation : Add all ingredients except olive oil to a food processor. Pulse until evenly chopped. Slowly add olive oil through the top of the processor and pulse until combined.",
   " 30 min ,  0 min , 1 - 2 "
 );
@@ -185,7 +235,7 @@ breakfast1.breakfast();
 const breakfast2 = new food(
   "Crispy Oven Baked Potato 🍠",
   "imagess/breakfast.img/Screenshot 2024-02-04 at 11.34.43 PM.png",
-  "Ingredients  ,chickpea flour - 1 cup ,  bean flour - 120 g ,tapioca - 1/2 cup  , flour/starch - 60g , spinach leaves - 60 g , water - 1/8 cup ,salt -  1/3 tsp ",
+  "chickpea flour - 1 cup ,  bean flour - 120 g ,tapioca - 1/2 cup  , flour/starch - 60g , spinach leaves - 60 g , water - 1/8 cup ,salt -  1/3 tsp ",
   "Preparation : Process all ingredients in your food processor or blender until the batter is smooth. Use 1 cup of water if you plan to make thicker/smaller tortillas for tacos. Add about 1 1/8 cup of water if you want to make thinner/bigger tortillas for e.g. burritos",
   " 30 min  ,  0 min  ,  2 - 3 "
 );
@@ -194,7 +244,7 @@ breakfast2.breakfast();
 const salad3 = new food(
   "🍄 Grilled mushrooms 🍄 ",
   "imagess/salads.img/Screenshot 2024-02-04 at 11.48.45 PM.png",
-  "Ingredients , mushroom fiats - 8 medium , olive cloves - 60mls , continental parsley - 1/4 chopped ",
+  "mushroom fiats - 8 medium , olive cloves - 60mls , continental parsley - 1/4 chopped ",
   "Preparation :Step 1Preheat grill on medium-high. Line a grill tray or baking tray with foil. Place the mushrooms on the lined tray.Step 2Combine the olive oil, garlic and 2 tablespoons of the parsley in a bowl. Drizzle the mushrooms with the garlic oil.",
   " 1 hrs , 0 min , 2 - 3 "
 );
@@ -203,7 +253,7 @@ salad3.salads();
 const salad4 = new food(
   " Spinach salad 🍓🥑 ",
   "imagess/salads.img/Screenshot 2024-02-04 at 11.45.53 PM.png",
-  "Ingredients  ,cashew butter -  1 tbsp , apple cider - 1 tbsp , vinegar  - 1/2 tbsp  , water - 60mls",
+  "cashew butter -  1 tbsp , apple cider - 1 tbsp , vinegar  - 1/2 tbsp  , water - 60mls",
   "Preparation :Step 1Preheat grill on medium-high. Line a grill tray or baking tray with foil. Place the mushrooms on the lined tray.Step 2Combine the olive oil, garlic and 2 tablespoons of the parsley in a bowl. Drizzle the mushrooms with the garlic oil.",
 
   " 1 hrs  ,10 min , 2 - 3 "
@@ -213,7 +263,7 @@ salad4.salads();
 const salad5 = new food(
   " Oven baked sweet potato 🍠",
   "imagess/salads.img/IMG_8520.jpg ",
-  "Ingredients ,sweet potatoes - 4 ,  optional - 4 tbsp, black pepper",
+  "sweet potatoes - 4 ,  optional - 4 tbsp, black pepper",
   "Preparation :Step 1 Preheat oven to 425º. On a baking sheet lined with aluminum foil, prick sweet potatoes all over with a fork. Rub the outsides with a small amount of olive oil if you intend to eat the skins. Step 2 Bake until tender, 45 to 50 minutes. Step 3 Let cool, then split the tops open with a knife and top with a pat of butter. Step 4 Season with salt and pepper before serving.",
   " 1 hrs , 0 min , 2 - 3 "
 );
@@ -222,7 +272,7 @@ salad5.salads();
 const pasta3 = new food(
   " bolognese pasta 🍝 ",
   "imagess/pasta.img/IMG_8521.jpg",
-  "Ingredients  ,cashew butter - 1 tbsp , apple cider vinegar - 1 tbsp ,water- 1/2 tbsp ",
+  "cashew butter - 1 tbsp , apple cider vinegar - 1 tbsp ,water- 1/2 tbsp ",
   "Preparation :Thread a cherry tomato, a mozzarella ball, and a basil leaf onto small skewers or toothpicks.Arrange the skewers on a serving platter. Drizzle balsamic glaze over the skewers.  Serve as a refreshing and colorful appetizer.",
   " 1 hrs , 20 min , 2 - 3 "
 );
@@ -231,7 +281,7 @@ pasta3.pasta();
 const salad6 = new food(
   " Buddha.Bowl 🥗",
   "imagess/salads.img/IMG_8522.jpg",
-  "Ingredients ,cashew butter- 1 tbsp,apple cider - 1 tbsp , vinegar -1/2 tbsp , water - 1/2 tbsp",
+  "cashew butter- 1 tbsp,apple cider - 1 tbsp , vinegar -1/2 tbsp , water - 1/2 tbsp",
   "Preparation :Thread a cherry tomato, a mozzarella ball, and a basil leaf onto small skewers or toothpicks.Arrange the skewers on a serving platter.Drizzle balsamic glaze over the skewers.Serve as a refreshing and colorful appetizer.",
   " 1 hrs  ,10 min , 2 - 3 "
 );
@@ -240,7 +290,7 @@ salad6.salads();
 const lunch1 = new food(
   " Soup with Zucchini Noodles 🍜",
   "imagess/lunch.img/IMG_8524.jpg",
-  "Ingredients  ,cashew butter- 1 tbsp,apple cider - 1 tbsp , vinegar -1/2 tbsp , water - 1/2 tbsp",
+  "cashew butter- 1 tbsp,apple cider - 1 tbsp , vinegar -1/2 tbsp , water - 1/2 tbsp",
 
   "Preparation :  Thread a cherry tomato, a mozzarella ball, and a basil leaf onto small skewers or toothpicks.Arrange the skewers on a serving platter.Drizzle balsamic glaze over the skewers.Serve as a refreshing and colorful appetizer.",
   " 1 hrs , 10 min , 2 - 3 "
@@ -250,7 +300,7 @@ lunch1.lunch();
 const breakfast3 = new food(
   "Chickpeas and kale 🥑 ",
   "imagess/breakfast.img/Screenshot 2024-02-02 at 1.15.14 AM.png",
-  "Ingredients ,cashew butter- 1 tbsp,apple cider - 1 tbsp , vinegar -1/2 tbsp , water - 1/2 tbsp",
+  "cashew butter- 1 tbsp,apple cider - 1 tbsp , vinegar -1/2 tbsp , water - 1/2 tbsp",
 
   "Preparation ,Thread a cherry tomato, a mozzarella ball, and a basil leaf onto small skewers or toothpicks.Arrange the skewers on a serving platter.Drizzle balsamic glaze over the skewers.Serve as a refreshing and colorful appetizer.",
   " 1 hrs   , 10 min , 2 - 3 "
@@ -331,15 +381,22 @@ document.addEventListener("mousedown", (event) => {
   const clicked = event.target;
   let search_text = document.getElementById("second_page_search_inpt");
   let search_form = document.querySelector(".search_form");
+let once_clicked_graph=document.querySelector(".once_clicked_graph")
+
+if(once_clicked_graph){
+ once_clicked_graph.style.display = "none";
+}
 
   if (
     !search_container.contains(clicked) ||
     noResults_found.contains(clicked)
+   
   ) {
     hidden_div.innerHTML = "";
     result_Div.style.display = "none";
     search_text.value = "";
     noResults_found.style.display = "none";
+    
   }
 });
 
@@ -385,7 +442,8 @@ function once_clicked(ingredients) {
   let ingredient_list = create_ingredients_list(ingredients.textContent);
 
   let newdiv_for_clicked = document.createElement("div");
-  newdiv_for_clicked.className = "once_clicked_graph";
+  newdiv_for_clicked.className = "once_clicked_graph marked";
+
   newdiv_for_clicked.append(ingredient_list);
 
   return newdiv_for_clicked;
@@ -393,6 +451,12 @@ function once_clicked(ingredients) {
 
 function twice_clicked(ingredients, preparation) {
   const full_recipe_info = document.querySelector(".full_recipe_info");
+  const once_clicked = document.querySelectorAll(".once_clicked_graph");
+  once_clicked.forEach((once_clickedd) => {
+    if (once_clickedd.classList.contains("marked")) {
+      once_clickedd.style.display = "none";
+    }
+  });
 
   let newdiv_for_twice_clicked = document.createElement("div");
   newdiv_for_twice_clicked.className = "twice_clicked_graph";
@@ -449,7 +513,7 @@ function twice_clicked(ingredients, preparation) {
 
     let prep_title_div = document.createElement("div");
     prep_title_div.textContent = preparationsArray[0].trim();
-    whole_prep_container.append(prep_title_div);
+
     prep_title_div.className = "prep_title_div";
     const prep_text_container = document.createElement("div");
     prep_text_container.className = "prep_text_container";
@@ -458,14 +522,16 @@ function twice_clicked(ingredients, preparation) {
     prep_text.textContent = preparationsArray.slice(1).join().trim();
     prep_text.className = "prep_text";
     prep_text_container.append(prep_text);
-    whole_prep_container.append(prep_text_container);
+    whole_prep_container.append(prep_title_div, prep_text_container);
   }
 
   full_recipe_info.append(newdiv_for_twice_clicked);
 
   return newdiv_for_twice_clicked;
 }
+
 let clickCount;
+
 function click_Onrecipe() {
   let all_recipe = document.querySelectorAll(".common_class_forAll_recipe");
 
@@ -478,15 +544,19 @@ function click_Onrecipe() {
 
       if (clickCount % 2 == 0) {
         let newDiv = once_clicked(ingredients);
-
         recipe.append(newDiv);
       } else {
         document.getElementById("section1").style.display = "none";
         document.getElementById("section2").style.display = "none";
-        document.querySelector(".once_clicked_graph").style.display = "none";
+        const once_clicked = (document.querySelector(
+          ".once_clicked_graph"
+        ).style.display = "none");
+        const full_recipe_info_section = document.getElementById(
+          "full_recipe_info_section"
+        );
 
-        document.getElementById("full_recipe_info_section").style.display =
-          "block";
+        full_recipe_info_section.style.display = "block";
+
         recipe.classList.add("clicked");
         prep(recipe);
 
@@ -496,22 +566,24 @@ function click_Onrecipe() {
         full_recipe_img_div.className = "full_recipe_img_div";
 
         let newDiv = twice_clicked(ingredients, preparation);
-        full_recipe_info_section.append(full_recipe_img_div);
         const full_recipe_title = recipe
           .querySelector(".recipes_title")
           .cloneNode(true);
         full_recipe_title.className = "full_recipe_title";
         const full_recipe_title_div = document.createElement("div");
         full_recipe_title_div.className = "full_recipe_title_div";
-        full_recipe_title_div.append(full_recipe_title);
         const full_recipe_prep_info =
           document.querySelector(".full_recipe_info");
-        full_recipe_title_div.append(full_recipe_prep_info);
-        full_recipe_info_section.append(full_recipe_title_div);
+        full_recipe_title_div.append(full_recipe_title, full_recipe_prep_info);
 
-        full_recipe_info_section.append(newDiv);
+        full_recipe_info_section.append(
+          full_recipe_img_div,
+          full_recipe_title_div,
+          newDiv
+        );
       }
       clickCount++;
+
       recipe.dataset.clickCount = clickCount;
     });
   });
@@ -533,10 +605,9 @@ function prep(clickedRecipe) {
       prep_info_div.append(listitem);
     });
 
-    full_recipe_info_section.append(prep_info_div);
     const prep_template_div = document.querySelector(".prep_inf_container");
     prep_template_div.style.display = "flex";
-    full_recipe_info_section.append(prep_template_div);
+    full_recipe_info_section.append(prep_info_div, prep_template_div);
   }
 
   clickedRecipe.classList.remove("clicked");
@@ -545,14 +616,17 @@ function prep(clickedRecipe) {
 click_Onrecipe();
 
 function backtohome(event) {
-  document.querySelector("#full_recipe_info_section").style.display = "none";
+  const full_recipe_info_section = (document.querySelector(
+    "#full_recipe_info_section"
+  ).style.display = "none");
   document.querySelector("#salads_page_id").style.display = "none";
   document.querySelector("#lunch_page_id").style.display = "none";
-document.querySelector("#breakfast_page_id").style.display = "none";
-document.querySelector("#pasta_page_id").style.display = "none";
+  document.querySelector("#breakfast_page_id").style.display = "none";
+  document.querySelector("#pasta_page_id").style.display = "none";
   document.getElementById("section1").style.display = "none";
-
+  full_recipe_info_section.innerHTML = "";
   document.getElementById("section2").style.display = "block";
+  document.querySelector(".hearted_recipes").style.display = "none";
 }
 
 const second_page = document.querySelector(".second_page");
@@ -573,58 +647,137 @@ function salads_page() {
   document.getElementById("section1").style.display = "none";
   document.getElementById("section2").style.display = "none";
   document.getElementById("full_recipe_info_section").style.display = "none";
-  const salads_section = document.getElementById("salads_page_id"); 
+  const salads_section = document.getElementById("salads_page_id");
   salads_section.style.display = "block";
   const salad_recipes_arr = Array.from(total_recipes).filter((recipe) => {
     return recipe.classList.contains("salad");
   });
+  const sorted_categories = document.querySelector(".sorted_categories");
+  salads_section.append(sorted_categories);
+  sorted_categories.innerHTML = "";
   salad_recipes_arr.forEach((saladrecipe) => {
-    salads_section.append(saladrecipe.cloneNode(true));
+    sorted_categories.append(saladrecipe.cloneNode(true));
   });
- 
 }
 
 function breakfast_page() {
   document.getElementById("section1").style.display = "none";
   document.getElementById("section2").style.display = "none";
   document.getElementById("full_recipe_info_section").style.display = "none";
-  const breakfast_section = document.getElementById("breakfast_page_id"); 
+  const breakfast_section = document.getElementById("breakfast_page_id");
   breakfast_section.style.display = "block";
   const breakfast_recipes_arr = Array.from(total_recipes).filter((recipe) => {
     return recipe.classList.contains("breakfast");
   });
+  const sorted_categories = document.querySelector(".sorted_categories");
+  breakfast_section.append(sorted_categories);
+  sorted_categories.innerHTML = "";
   breakfast_recipes_arr.forEach((breakfastrecipe) => {
-    breakfast_section.append(breakfastrecipe.cloneNode(true));
+    sorted_categories.append(breakfastrecipe.cloneNode(true));
   });
- 
 }
 
 function lunch_page() {
   document.getElementById("section1").style.display = "none";
   document.getElementById("section2").style.display = "none";
   document.getElementById("full_recipe_info_section").style.display = "none";
-  const lunch_section = document.getElementById("lunch_page_id"); 
+  const lunch_section = document.getElementById("lunch_page_id");
   lunch_section.style.display = "block";
   const lunch_recipes_arr = Array.from(total_recipes).filter((recipe) => {
     return recipe.classList.contains("lunch");
   });
+  const sorted_categories = document.querySelector(".sorted_categories");
+
+  lunch_section.append(sorted_categories);
+  sorted_categories.innerHTML = "";
   lunch_recipes_arr.forEach((lunchrecipe) => {
-    lunch_section.append(lunchrecipe.cloneNode(true));
+    sorted_categories.append(lunchrecipe.cloneNode(true));
   });
 }
 
-
 function pasta_page() {
+ 
+
   document.getElementById("section1").style.display = "none";
   document.getElementById("section2").style.display = "none";
   document.getElementById("full_recipe_info_section").style.display = "none";
-  const pasta_section = document.getElementById("pasta_page_id"); 
+  const pasta_section = document.getElementById("pasta_page_id");
+  const div_for_recipe = document.createElement("div");
   pasta_section.style.display = "block";
   const pasta_recipes_arr = Array.from(total_recipes).filter((recipe) => {
     return recipe.classList.contains("pasta");
   });
+  const sorted_categories = document.querySelector(".sorted_categories");
+  pasta_section.append(sorted_categories);
+  sorted_categories.innerHTML = "";
   pasta_recipes_arr.forEach((pastarecipe) => {
-    pasta_section.append(pastarecipe.cloneNode(true));
+    sorted_categories.appendChild(pastarecipe.cloneNode(true));
   });
 }
 
+
+
+
+function addToFavorites(recipeId) {
+  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+  
+  const isFavorited = favorites.includes(recipeId);
+
+  if (!isFavorited) {
+    favorites.push(recipeId);
+
+    alert("Recipe added to favorites!");
+  
+    console.log(favorites);
+    console.log(recipeId)
+  } else {
+    const indexToRemove = favorites.indexOf(recipeId);
+    favorites.splice(indexToRemove, 1);
+    alert("Recipe removed from favorites!");
+  }
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+  hearted_recipes(favorites);
+}
+
+const recipeElements = document.querySelectorAll(
+  ".common_class_forAll_recipe "
+);
+recipeElements.forEach((recipeElement) => {
+  const button = recipeElement.querySelector(".heart_btn");
+  button.addEventListener("click", function () {
+    button.classList.toggle("active")
+    // localStorage.clear();
+    const recipeId = recipeElement.dataset.recipeId;
+    addToFavorites(recipeId);
+  });
+});
+
+function hearted_recipes(favorites) {
+  const favoritesArray = Array.isArray(favorites) ? favorites : [];
+  const hearted_section = document.querySelector(".hearted_recipes");
+  const chosens_div = document.querySelector(".chosens_div");
+
+  chosens_div.innerHTML = '';
+
+  recipeElements.forEach((recipeElement) => {
+    const recipeId = recipeElement.dataset.recipeId;
+    if (favoritesArray.includes(recipeId)) {
+
+
+      const clonedRecipeElement = recipeElement.cloneNode(true);
+     
+      chosens_div.append(clonedRecipeElement);
+      console.log(recipeId);
+      console.log(favoritesArray);
+      console.log(recipeElement);
+    }
+  });
+}
+
+function open_fav_section(){
+  const hearted_section = document.querySelector(".hearted_recipes");
+  document.getElementById("section2").style.display = "none";
+  hearted_section.style.display = "block";
+  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+  hearted_recipes(favorites);
+}
