@@ -37,9 +37,7 @@
     <section class="second_page" id="section2">
       <div class="secpage_container">
         <header class="second_page_header">
-          <div class="second_pg_menu">
-           
-          </div>
+          <div class="second_pg_menu"></div>
           <div class="title_container">
             <h3 class="title_text">Find best recipes</h3>
           </div>
@@ -67,14 +65,20 @@
             </div>
           </div>
         </header>
-        <div class="trending">
-          <h2 class="trending_text">Trending Now 🔥</h2>
-          <div class="scroll_trends">
+        <div class="scroll_wantch"></div>
+
+        <div class="scroll_trends">
+          <div class="trending">
+            <h2 class="trending_text">Trending Now 🔥</h2>
+
             <div class="random_trendy_container"></div>
           </div>
           <div class="popular_category">
             <div class="category_title">
-              <h3>Popular category</h3>
+              <h3>
+                Popular category
+                <div class="heart_btn_div"></div>
+              </h3>
             </div>
 
             <div class="navbar_container">
@@ -129,8 +133,12 @@
       <div class="nav_bar nav_bar_2">
         <ul class="nav_bar_items">
           <li onclick="salads_page()"><a href="#salads_page_id">Salads</a></li>
-          <li><a onclick="breakfast_page()" href="#breakfast_page_id">breakfast</a></li>
-          <li><a  onclick="lunch_page()" href="#lunch_page_id">lunch</a></li>
+          <li>
+            <a onclick="breakfast_page()" href="#breakfast_page_id"
+              >breakfast</a
+            >
+          </li>
+          <li><a onclick="lunch_page()" href="#lunch_page_id">lunch</a></li>
           <li><a onclick="pasta_page()" href="#pasta_page_id">pasta</a></li>
         </ul>
       </div>
@@ -146,25 +154,52 @@
     <section id="salads_page_id" class="salads_page">
       <button id="home_button" class="back_click" onclick="backtohome()">
         <i class="fa-duotone fa-arrow-left back_click"></i>
+        <div class="sorted_categories"></div>
       </button>
     </section>
 
     <section id="breakfast_page_id" class="breakfast_page">
       <button id="home_button" class="back_click" onclick="backtohome()">
         <i class="fa-duotone fa-arrow-left back_click"></i>
+        <div class="sorted_categories"></div>
       </button>
     </section>
 
     <section id="lunch_page_id" class="lunch_page">
       <button id="home_button" class="back_click" onclick="backtohome()">
         <i class="fa-duotone fa-arrow-left back_click"></i>
+        <div class="sorted_categories"></div>
       </button>
     </section>
 
-    <section id="pasta_page_id" class="pasta_page">
+    <section  id="pasta_page_id" class="pasta_page">
       <button id="home_button" class="back_click" onclick="backtohome()">
         <i class="fa-duotone fa-arrow-left back_click"></i>
+        <div class="sorted_categories"></div>
       </button>
+     
     </section>
+    <section style="display: none" class="hearted_recipes">
+   <div class="chosens_div">
+
+   </div>
+    </section>
+    <button style="display: none" class="heart_btn">
+      <i class="fas fa-heart"></i>
+    </button>
+    <footer>
+      <div class="footer_div">
+        <button onclick="backtohome()" class="home_btn button_F" type="button">
+          <i class="fa-solid fa-house"></i>
+        </button>
+        <button
+          onclick="open_fav_section()"
+          class="favs_btn button_F"
+          type="button"
+        >
+          <i class="fa-solid fa-house-heart"></i>
+        </button>
+      </div>
+    </footer>
   </body>
 </html>
