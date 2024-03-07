@@ -381,22 +381,20 @@ document.addEventListener("mousedown", (event) => {
   const clicked = event.target;
   let search_text = document.getElementById("second_page_search_inpt");
   let search_form = document.querySelector(".search_form");
-let once_clicked_graph=document.querySelector(".once_clicked_graph")
+  let once_clicked_graph = document.querySelector(".once_clicked_graph");
 
-if(once_clicked_graph){
- once_clicked_graph.style.display = "none";
-}
+  if (once_clicked_graph) {
+    once_clicked_graph.style.display = "none";
+  }
 
   if (
     !search_container.contains(clicked) ||
     noResults_found.contains(clicked)
-   
   ) {
     hidden_div.innerHTML = "";
     result_Div.style.display = "none";
     search_text.value = "";
     noResults_found.style.display = "none";
-    
   }
 });
 
@@ -696,8 +694,6 @@ function lunch_page() {
 }
 
 function pasta_page() {
- 
-
   document.getElementById("section1").style.display = "none";
   document.getElementById("section2").style.display = "none";
   document.getElementById("full_recipe_info_section").style.display = "none";
@@ -715,21 +711,18 @@ function pasta_page() {
   });
 }
 
-
-
-
 function addToFavorites(recipeId) {
   const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-  
+
   const isFavorited = favorites.includes(recipeId);
 
   if (!isFavorited) {
     favorites.push(recipeId);
 
     alert("Recipe added to favorites!");
-  
+
     console.log(favorites);
-    console.log(recipeId)
+    console.log(recipeId);
   } else {
     const indexToRemove = favorites.indexOf(recipeId);
     favorites.splice(indexToRemove, 1);
@@ -745,7 +738,7 @@ const recipeElements = document.querySelectorAll(
 recipeElements.forEach((recipeElement) => {
   const button = recipeElement.querySelector(".heart_btn");
   button.addEventListener("click", function () {
-    button.classList.toggle("active")
+    button.classList.toggle("active");
     // localStorage.clear();
     const recipeId = recipeElement.dataset.recipeId;
     addToFavorites(recipeId);
@@ -757,27 +750,59 @@ function hearted_recipes(favorites) {
   const hearted_section = document.querySelector(".hearted_recipes");
   const chosens_div = document.querySelector(".chosens_div");
 
-  chosens_div.innerHTML = '';
+  chosens_div.innerHTML = "";
 
   recipeElements.forEach((recipeElement) => {
     const recipeId = recipeElement.dataset.recipeId;
     if (favoritesArray.includes(recipeId)) {
-
-
       const clonedRecipeElement = recipeElement.cloneNode(true);
-     
+
       chosens_div.append(clonedRecipeElement);
-      console.log(recipeId);
-      console.log(favoritesArray);
-      console.log(recipeElement);
+
+  
     }
   });
 }
 
-function open_fav_section(){
+function open_fav_section() {
   const hearted_section = document.querySelector(".hearted_recipes");
   document.getElementById("section2").style.display = "none";
   hearted_section.style.display = "block";
+
   const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
   hearted_recipes(favorites);
 }
+
+// let count = 0;
+
+// function store_clicked(clicked) {
+//   let unicId = `storedKey ${count}`;
+//   const newdiv = document.createElement("div");
+//   newdiv.id = unicId;
+//   const stored = JSON.parse(localStorage.getItem(unicId)) || [];
+//   console.log(stored);
+//   const check_stored = Array.isArray(stored) ? stored : [];
+//   const src = clicked.querySelector("img").getAttribute("src");
+//   const label = clicked.querySelector("label").textContent;
+//   const ingr = clicked.querySelector(".ingredients").textContent;
+//   const prep = clicked.querySelector(".preparation").textContent;
+//   const prep_info = clicked.querySelector(".prep_info").textContent;
+
+
+//   check_stored.push({ src, label, ingr, prep,prep_info});
+//   localStorage.setItem(unicId, JSON.stringify(check_stored));
+// }
+// function info_for_twiced() {
+//   const recipe_divs = [
+//     ...document.querySelectorAll(".common_class_forAll_recipe"),
+//   ];
+//   recipe_divs.forEach((clicked) => {
+//     clicked.addEventListener("click", (event) => {
+//       count++;
+//       store_clicked(clicked);
+//     });
+//   });
+// }
+// info_for_twiced()
+
