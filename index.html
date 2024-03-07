@@ -83,13 +83,12 @@
 
             <div class="navbar_container">
               <ul class="category_ul">
-                <li><a onclick="display_salad()" href="#">Salad</a></li>
-                <li>
-                  <a onclick="display_breakfast()" href="#">Breakfast</a>
+                <li onclick="display_salad()"><p>Salad</p></li>
+                <li onclick="display_breakfast()" > <p>Breakfast</p>
                 </li>
 
-                <li><a onclick="display_pasta()" href="#">Pasta</a></li>
-                <li><a onclick="display_lunch()" href="#">Lunch</a></li>
+                <li onclick="display_pasta()"><p>Pasta</p></li>
+                <li onclick="display_lunch()"><p>Lunch</p></li>
               </ul>
             </div>
           </div>
@@ -172,17 +171,14 @@
       </button>
     </section>
 
-    <section  id="pasta_page_id" class="pasta_page">
+    <section id="pasta_page_id" class="pasta_page">
       <button id="home_button" class="back_click" onclick="backtohome()">
         <i class="fa-duotone fa-arrow-left back_click"></i>
         <div class="sorted_categories"></div>
       </button>
-     
     </section>
     <section style="display: none" class="hearted_recipes">
-   <div class="chosens_div">
-
-   </div>
+      <div class="chosens_div"></div>
     </section>
     <button style="display: none" class="heart_btn">
       <i class="fas fa-heart"></i>
